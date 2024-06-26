@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: '',
     component: AuthPage
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
@@ -19,3 +20,6 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AuthPageRoutingModule {}
+
+
+// sciezka do strony z loginem

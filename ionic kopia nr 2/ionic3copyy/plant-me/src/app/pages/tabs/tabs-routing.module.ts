@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TabsPage } from './tabs.page';
+import { TabsPage } from './tabs.page';                                   // routing, scieżki zakładek
 
 const routes: Routes = [
   {
@@ -39,3 +39,7 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class TabsPageRoutingModule {}
+
+
+
+// sciezki do odnośników na polu zakładki

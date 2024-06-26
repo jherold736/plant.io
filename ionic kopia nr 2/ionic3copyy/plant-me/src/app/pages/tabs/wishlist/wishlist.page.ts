@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NavController } from '@ionic/angular'; // Import NavController for navigation
+import { NavController } from '@ionic/angular';     // import nava do nawigacji
 
 @Component({
   selector: 'app-wishlist',
   templateUrl: './wishlist.page.html',
-  styleUrls: ['./wishlist.page.scss'],
+  styleUrls: ['./wishlist.page.scss'],                                    // głowny moduł auth, def szablonu html i css do niego
+
 })
 export class WishlistPage implements OnInit {
 
   items: any[] = [
-    { id: 1, title: 'Succulent', imageUrl: 'assets/imgs/2.png' }, // Placeholder image
-    { id: 2, title: 'High Succulent', imageUrl: 'assets/imgs/3.png' }, // Placeholder image
-    { id: 3, title: 'Blue Succulent', imageUrl: 'assets/imgs/aloe.png' }, // Placeholder image
+    { id: 1, title: 'Succulent', imageUrl: 'assets/imgs/2.png' }, 
+    { id: 2, title: 'High Succulent', imageUrl: 'assets/imgs/3.png' }, 
+    { id: 3, title: 'Blue Succulent', imageUrl: 'assets/imgs/aloe.png' }, 
   ];
 
   constructor(private route: ActivatedRoute, private navCtrl: NavController) { }
@@ -22,13 +23,14 @@ export class WishlistPage implements OnInit {
       if (params && params['plantData']) {
         try {
           const plantData = JSON.parse(params['plantData']);
-          // Ustaw odpowiedni obiekt na podstawie ID lub innego kryterium
+
+          
           if (plantData.id === 1) {
-            this.items[0] = { ...plantData, imageUrl: 'assets/imgs/2.png' }; // Ustaw właściwy URL obrazu
+            this.items[0] = { ...plantData, imageUrl: 'assets/imgs/2.png' };               // url-e do obrazów
           } else if (plantData.id === 2) {
-            this.items[1] = { ...plantData, imageUrl: 'assets/imgs/3.png' }; // Ustaw właściwy URL obrazu
+            this.items[1] = { ...plantData, imageUrl: 'assets/imgs/3.png' }; 
           } else if (plantData.id === 3) {
-            this.items[2] = { ...plantData, imageUrl: 'assets/imgs/aloe.png' }; // Ustaw właściwy URL obrazu
+            this.items[2] = { ...plantData, imageUrl: 'assets/imgs/aloe.png' }; 
           }
         } catch (e) {
           console.error("Parsing error:", e);
@@ -37,11 +39,12 @@ export class WishlistPage implements OnInit {
     });
   }
 
-  // Funkcja wywoływana po kliknięciu na kontener rośliny
+
+  
   selectPlant(item: any) {
     let navigationExtras = {
       queryParams: {
-        plantData: JSON.stringify(item)
+        plantData: JSON.stringify(item)               // wysyłanie danych z planta do wishlisty
       }
     };
     this.navCtrl.navigateForward(['tabs/wishlist'], navigationExtras);

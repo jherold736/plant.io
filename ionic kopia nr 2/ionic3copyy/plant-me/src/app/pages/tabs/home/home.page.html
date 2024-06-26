@@ -23,11 +23,8 @@
       <ion-button slot="end" size="small" shape="round" color="primary">View all</ion-button>
     </ion-item>
 
-    <!-- Popular Items Section -->
     <div class="horizontal-scroll">
-      <!-- Dynamic rendering of popular items -->
       <div *ngFor="let item of popularItems" class="item-box" (click)="selectPlant(item)">
-        <!-- Use the dynamic imageUrl and title from the item object -->
         <img [src]="item.imageUrl" alt="{{item.title}}" />
         <ion-label>{{ item.title }}</ion-label>
       </div>
@@ -37,11 +34,10 @@
       <ion-label class="title">Featured</ion-label>
     </ion-item>
 
-    <!-- Featured Items Section -->
+   
     <div class="horizontal-scroll">
-      <!-- Dynamic rendering of featured items -->
+      
       <div *ngFor="let item of featuredItems" class="item-box featured" (click)="selectPlant(item)">
-        <!-- Use the dynamic imageUrl and title from the item object -->
         <img [src]="item.imageUrl" alt="{{item.title}}" />
         <ion-label>{{ item.title }}</ion-label>
       </div>

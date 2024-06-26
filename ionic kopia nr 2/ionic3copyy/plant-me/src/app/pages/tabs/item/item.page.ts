@@ -13,3 +13,6 @@ export class ItemPage implements OnInit {
   }
 
 }
+
+
+// głowny moduł itemu planta, def szablonu html i css do niego

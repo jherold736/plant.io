@@ -15,3 +15,5 @@ describe('AuthPage', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// testy jednostkowe dla glownej strony auth ?

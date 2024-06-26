@@ -13,3 +13,6 @@ export class AuthPage implements OnInit {
   }
 
 }
+
+
+// głowny moduł auth, def szablonu html i css do niego

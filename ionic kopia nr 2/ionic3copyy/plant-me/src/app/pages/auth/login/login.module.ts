@@ -18,3 +18,6 @@ import { LoginPage } from './login.page';
   declarations: [LoginPage]
 })
 export class LoginPageModule {}
+
+
+// import, definiowanie modułów do strony logowania

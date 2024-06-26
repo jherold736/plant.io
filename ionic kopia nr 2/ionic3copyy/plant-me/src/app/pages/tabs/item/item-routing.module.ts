@@ -15,3 +15,6 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class ItemPageRoutingModule {}
+
+
+// ścieżka dla pojedynczego itemku

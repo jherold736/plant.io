@@ -31,15 +31,15 @@ export class HomePage implements OnInit {
   }
 
   shuffleItems(array: any[]) {
-    for (let i = array.length - 1; i > 0; i--) {
+    for (let i = array.length - 1; i > 0; i--) {                 // randomizowanie wyświetlania roślinek na home page
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
 
-  // This function is called when a plant is selected
+  
   selectPlant(item: any) {
-    let navigationExtras: NavigationExtras = {
+    let navigationExtras: NavigationExtras = {                    // przypisanie danych z featured itemów i popular do wishlist * Nie dziala *
       queryParams: {
         plantData: JSON.stringify(item)
       }
@@ -47,4 +47,8 @@ export class HomePage implements OnInit {
     this.navCtrl.navigateForward(['tabs/wishlist'], navigationExtras);
   }
 }
+
+
+// głowny moduł strony home, def szablonu html i css do niego
+
 

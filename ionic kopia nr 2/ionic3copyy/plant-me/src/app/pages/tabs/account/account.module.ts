@@ -18,3 +18,6 @@ import { AccountPage } from './account.page';
   declarations: [AccountPage]
 })
 export class AccountPageModule {}
+
+
+// def modułów

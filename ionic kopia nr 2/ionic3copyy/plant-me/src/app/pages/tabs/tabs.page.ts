@@ -22,3 +22,6 @@ export class TabsPage implements OnInit {
   }
 
 }
+
+
+// głowny moduł zakładki, def szablonu html i css do niego

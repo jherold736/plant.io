@@ -42,7 +42,7 @@
  *
  */
  
-import './zone-flags';
+import './zone-flags';                                                                                      // prawdopodobnie chodzi o kompatybilność z różnymi przeglądarkami
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.

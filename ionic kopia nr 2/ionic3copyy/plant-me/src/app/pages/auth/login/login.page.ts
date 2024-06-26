@@ -13,3 +13,5 @@ export class LoginPage implements OnInit {
   }
 
 }
+
+// głowny moduł loginu, def szablonu html i css do niego

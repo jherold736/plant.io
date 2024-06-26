@@ -13,3 +13,5 @@ export class AccountPage implements OnInit {
   }
 
 }
+
+// głowny moduł strony konta, def szablonu html i css do niego

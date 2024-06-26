@@ -15,3 +15,6 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class HomePageRoutingModule {}
+
+
+// ściezka do widoku home
