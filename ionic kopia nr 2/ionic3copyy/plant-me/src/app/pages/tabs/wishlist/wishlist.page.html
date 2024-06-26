@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Plant Care</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Kontener 1: Wyświetlanie informacji o pierwszym elemencie -->
+  <ion-card *ngIf="items[0].title">
+    <img [src]="items[0].imageUrl" alt="{{items[0].title}}" />
+    <ion-card-header>
+      <ion-card-title>{{ items[0].title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Temperature: 20 </strong>{{ items[0].temperature }}°C</p>
+      <p><strong>Watering: Low </strong>{{ items[0].watering }}</p>
+      <p><strong>Light: Bright indirect</strong>{{ items[0].light }}</p>
+      <p><strong>Humidity: Low </strong>{{ items[0].humidity }}</p>
+      <p><strong>Soil: Well-draining </strong>{{ items[0].soil }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Kontener 2: Wyświetlanie informacji o drugim elemencie -->
+  <ion-card *ngIf="items[1].title">
+    <img [src]="items[1].imageUrl" alt="{{items[1].title}}" />
+    <ion-card-header>
+      <ion-card-title>{{ items[1].title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Temperature: 25 </strong>{{ items[1].temperature }}°C</p>
+      <p><strong>Watering: Moderate </strong>{{ items[1].watering }}</p>
+      <p><strong>Light: Bright direct </strong>{{ items[1].light }}</p>
+      <p><strong>Humidity: Medium </strong>{{ items[1].humidity }}</p>
+      <p><strong>Soil: Cactus mix</strong>{{ items[1].soil }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Kontener 3: Wyświetlanie informacji o trzecim elemencie -->
+  <ion-card *ngIf="items[2].title">
+    <img [src]="items[2].imageUrl" alt="{{items[2].title}}" />
+    <ion-card-header>
+      <ion-card-title>{{ items[2].title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Temperature: 22 </strong>{{ items[2].temperature }}°C</p>
+      <p><strong>Watering: Low </strong>{{ items[2].watering }}</p>
+      <p><strong>Light: Partial Shade </strong>{{ items[2].light }}</p>
+      <p><strong>Humidity: Low </strong>{{ items[2].humidity }}</p>
+      <p><strong>Soil: Sandy </strong>{{ items[2].soil }}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+

@@ -1,0 +1,85 @@
+ion-header {
+    background: var(--ion-color-light);
+  
+    ion-list {
+      background: var(--ion-color-primary);
+      border-radius: 0 0 20px 20px;
+      padding-bottom: 7vh;
+  
+      ion-item {
+        ion-label {
+          font-weight: bold;
+          font-size: 1.2rem;
+          letter-spacing: 0.5px;
+        }
+  
+        ion-avatar {
+          background: white;
+        }
+      }
+    }
+  
+    .popover {
+      margin: 0 8px;
+  
+      ion-searchbar {
+        --border-radius: 20px;
+        margin-top: -30px;
+        --background: #ffffff; /* Tło dla searchbara */
+        --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+        --padding-top: 4px; /* Dopasowanie paddingu */
+        --padding-bottom: 4px; /* Dopasowanie paddingu */
+        --padding-start: 10px; /* Dopasowanie paddingu po lewej stronie */
+        --padding-end: 10px; /* Dopasowanie paddingu po prawej stronie */
+        --border-color: var(--ion-color-primary); /* Kolor obramowania */
+      }
+    }
+  }
+  
+  ion-content {
+    --background: var(--ion-color-light);
+  
+    .title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--ion-color-dark);
+    }
+  
+    .horizontal-scroll {
+      display: flex;
+      overflow-x: auto; /* Pozwala na przewijanie poziome */
+      padding: 10px 0;
+      scroll-snap-type: x mandatory; /* Przewijanie dopasowane do elementów */
+      gap: 10px; /* Odstępy między elementami */
+    }
+  
+    .item-box {
+      flex: 0 0 auto;
+      scroll-snap-align: start; /* Przewijanie dopasowane do początku elementu */
+      min-width: 150px; /* Minimalna szerokość elementu */
+      max-width: 200px; /* Maksymalna szerokość elementu */
+      text-align: center; /* Wyśrodkowanie tekstu */
+      background-color: white; /* Tło elementu */
+      border-radius: 10px; /* Zaokrąglone rogi */
+      padding: 10px; /* Wewnętrzne odstępy */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Delikatny cień */
+      transition: transform 0.3s ease; /* Płynne przekształcenia */
+    }
+  
+    .item-box img {
+      width: 100%; /* Dopasowanie szerokości do kontenera */
+      height: auto; /* Automatyczne dopasowanie wysokości, zachowując proporcje */
+      object-fit: contain; /* Skaluje obraz, aby mieścił się w kontenerze */
+      border-radius: 10px; /* Zaokrąglone rogi obrazu */
+    }
+  
+    .item-box.featured {
+      min-width: 200px; /* Większa szerokość dla wyróżnionych elementów */
+    }
+  
+    .item-box.featured img {
+      object-fit: cover; /* Skaluje i przycina obraz, aby wypełniał kontener */
+    }
+  }
+  
+  
