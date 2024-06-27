@@ -4,10 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
   <ion-card>
-    <img src="assets/imgs/prof.png" alt="Profile Picture"/>
+    <div class="rounded-corners"></div> 
+    <div class="rounded-corners right"></div> 
+    <div class="profile-container">
+      <img src="assets/imgs/prof.png" alt="Profile Picture" class="profile-picture"/>               <!-- ozdobne koła -->
+      <div class="add-photo-icon">
+        <ion-icon name="add-circle"></ion-icon>
+      </div>
+    </div>
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">Name</ion-label>
@@ -21,11 +27,11 @@
 
       <ion-button expand="full" (click)="updateProfile()">Update Profile</ion-button>
 
+      
       <div class="side-links">
-        <ion-button fill="clear" color="primary" (click)="changePassword()">Change Password</ion-button>
+        <ion-button fill="clear" color="primary" (click)="changePassword()">Change Password</ion-button>          <!-- te boczne linki -->
         <ion-button fill="clear" color="danger" (click)="logout()">Logout</ion-button>
       </div>
-
     </ion-card-content>
   </ion-card>
 </ion-content>

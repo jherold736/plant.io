@@ -1,5 +1,6 @@
 ion-card {
     margin: 40px;
+    overflow: hidden;
 
 
     .profile-container {
@@ -54,26 +55,7 @@ ion-card {
       
     }
 
-    &::before,
-    &::after  {
-    content: '';
-    position: absolute;
-    width: 600px; 
-    height: 600px; 
-    background-color: #4CAF50; 
-    border-radius: 50%; 
-    top: -300px; 
-    z-index: 0;
-    }
-
-    &::before {
-    left: -300px; 
-    }
- 
-    &::after {
-    right: -300px; 
-    }
-
+  
 
     .side-links {
         display: flex;
