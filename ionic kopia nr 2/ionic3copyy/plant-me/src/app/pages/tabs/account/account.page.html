@@ -1,10 +1,34 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>account</ion-title>
+    <ion-title>Account</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
+<ion-content>
+  <ion-card>
+    <img src="assets/imgs/prof.png" alt="Profile Picture"/>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input [(ngModel)]="profile.name" placeholder="Enter your name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="profile.email" placeholder="Enter your email"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="updateProfile()">Update Profile</ion-button>
+
+      <div class="side-links">
+        <ion-button fill="clear" color="primary" (click)="changePassword()">Change Password</ion-button>
+        <ion-button fill="clear" color="danger" (click)="logout()">Logout</ion-button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
 
 
 <!-- szablon do strony konta -->
